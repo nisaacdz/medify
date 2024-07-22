@@ -4,8 +4,8 @@ const sequelize = new Sequelize('database', 'username', 'password', {
     dialect: 'postgres'
 });
 
-const patient = sequelize.define('patient', {
-    patient_id: {
+const HealthcareProfessionals = sequelize.define('HealthcareProfessionals', {
+    professional_id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
@@ -21,45 +21,44 @@ const patient = sequelize.define('patient', {
     other_names: {
         type: DataTypes.TEXT
     },
-    date_of_birth: {
-        type: DataTypes.INTEGER
-    },
-    address: {
-        type: DataTypes.TEXT
-    },
     email: {
-        type: DataTypes.TEXT
-    },
-    sex_chromosome: {
-        type: DataTypes.STRING(2)
-    },
-    blood_type: {
-        type: DataTypes.TEXT
+        type: DataTypes.TEXT,
+        allowNull: false,
+        unique: true
     },
     phone: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
+    license: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
+    schedule: {
         type: DataTypes.TEXT
     },
-    medical_history: {
+    position: {
         type: DataTypes.TEXT
     },
-    emergency_contact_name: {
+    specialization: {
         type: DataTypes.TEXT
     },
-    emergency_contact_phone: {
+    years_of_experience: {
+        type: DataTypes.INTEGER
+    },
+    certification: {
         type: DataTypes.TEXT
     },
-    insurance_provider: {
+    current_shift: {
         type: DataTypes.TEXT
     },
-    insurance_policy_number: {
-        type: DataTypes.TEXT
+    professional_type: {
+        type: DataTypes.TEXT,
+        allowNull: false
     }
 }, {
-    tableName: 'patient',
+    tableName: 'professionals',
     timestamps: false
 });
 
-// Sync the model with the database
-sequelize.sync();
-
-export default patient;
+module.exports = HealthcareProfessionals;
