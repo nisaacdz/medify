@@ -1,0 +1,35 @@
+my-fullstack-project/
+│
+├── client/                      # React frontend
+│   ├── public/                  # Public assets
+│   ├── src/                     # Source files
+│   │   ├── components/          # React components
+│   │   ├── hooks/               # Custom hooks
+│   │   ├── pages/               # React pages or views
+│   │   ├── services/            # API service calls
+│   │   ├── styles/              # CSS or SCSS files
+│   │   ├── utils/               # Utility functions
+│   │   └── App.js               # Main app component
+│   ├── .env                     # Environment variables for React
+│   ├── package.json             # React project metadata and dependencies
+│   └── README.md                # Project documentation
+│
+├── server/                      # Express backend
+│   ├── config/                  # Configuration files (e.g., database connection)
+│   ├── controllers/             # Route handlers or business logic
+│   ├── models/                  # Database models (e.g., Sequelize or Mongoose models)
+│   ├── routes/                  # API routes
+│   ├── utils/                   # Utility functions
+│   ├── .env                     # Environment variables for Express
+│   ├── app.js                   # Express application setup
+│   ├── package.json             # Express project metadata and dependencies
+│   └── README.md                # Project documentation
+│
+├── database/                    # Database-related scripts
+│   ├── migrations/              # Database migrations
+│   ├── seeds/                   # Database seed data
+│   └── schema.sql               # SQL schema file (if needed)
+│
+├── .gitignore                   # Git ignore file
+├── README.md                    # Project overview and setup instructions
+└── package.json                 # Root package.json (if you have root-level dependencies or scripts)
